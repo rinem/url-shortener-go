@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/go-chi/chi/v5"
+  "github.com/rinem/url-shortener-go/internal/handlers"
 )
 
 func main() {
@@ -56,6 +57,8 @@ func main() {
 			log.Fatal(err)
 		}
 	}()
+
+  r.Get("/healthcheck", handlers.NewHealthHandler().ServeHTTP)
 
 	logger.Info("Server Up!")
 
