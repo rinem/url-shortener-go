@@ -1,7 +1,7 @@
 package mock
 
 import (
-	"github.com/rinem/url-shortener/store"
+	"github.com/rinem/url-shortener-go/store"
 	"github.com/stretchr/testify/mock"
 )
 
